@@ -13,6 +13,18 @@ Universal Dependencies Markup:
 - [UD for Belarusian](https://universaldependencies.org/be/index.html)
 - [Belarusian-HSE treebank](https://universaldependencies.org/treebanks/be_hse/index.html)
 
+## Characteristics
+
+Engine: SQLite 3 
+
+Encoding: UTF-8
+
+| Level | Number |
+| ----- | ----- |
+| Lemma | 238,345 |
+| Variant | 239,638 |
+| Form | 3,968,107 |
+
 ## Database structure
 ![BDschema](https://github.com/k-nem/BelGrammarDB/blob/main/DBschema.png "BDschema")
 
