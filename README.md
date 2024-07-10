@@ -4,8 +4,8 @@
 This project is concerned with the conversion of the existing [bnkorpus.info] database of Belarusian grammar into a more lightweight searchable format that is compatible with [Universal Dependencies](https://universaldependencies.org/) markup. When possible, the markup adheres to [Belarusian-HSE treebank](https://universaldependencies.org/treebanks/be_hse/index.html) format, but additional features were introduced based on parameters available in the source data and UD conventions. The data was collected from the source material without modifications except morphological tag conversion and exclusion of optional . The initial markup 
 
 Data:
-- BNCorpus repository with documentation: [GrammarDB on GitHub↗︎](https://github.com/Belarus/GrammarDB)
-- Source files in XML: [RELEASE-202309 on GitHub↗︎](https://github.com/Belarus/GrammarDB/releases)
+- BNCorpus repository with documentation: [GrammarDB on GitHub](https://github.com/Belarus/GrammarDB)
+- Source files in XML: [RELEASE-202309 on GitHub](https://github.com/Belarus/GrammarDB/releases)
 - Accompanying publication with markup description (BE): [Граматычная база беларускай мовы / уклад. Уладзімір Кошчанка, Алесь Булойчык↗︎](https://www.academia.edu/60297156/%D0%93%D1%80%D0%B0%D0%BC%D0%B0%D1%82%D1%8B%D1%87%D0%BD%D0%B0%D1%8F_%D0%B1%D0%B0%D0%B7%D0%B0_%D0%B1%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D0%BA%D0%B0%D0%B9_%D0%BC%D0%BE%D0%B2%D1%8B_Belarusian_Language_Grammar_Database)
 
 Universal Dependencies Markup:
@@ -219,3 +219,8 @@ Columns:
 - `Short INTEGER` - {Кароткая форма} - Short form of participle (VERB, VerbForm == Part)
     - `1` - True 
     - `0` - False
+
+
+
+## License
+Data reused from [GrammarDB](https://github.com/Belarus/GrammarDB) under [Creative Commons Attribution/Share-Alike 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
