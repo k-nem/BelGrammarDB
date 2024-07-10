@@ -1,7 +1,7 @@
 # BelGrammarDB
 
 ## About the project
-This project is concerned with the conversion of the existing [bnkorpus.info] database of Belarusian grammar into a more lightweight searchable format that is compatible with [Universal Dependencies](https://universaldependencies.org/) markup. When possible, the markup adheres to [Belarusian-HSE treebank](https://universaldependencies.org/treebanks/be_hse/index.html) format, but additional features were introduced based on parameters available in the source data and UD conventions. The data was collected from the source material without modifications except tag format conversion and the exclusion of undocumented tags.
+This project is concerned with the conversion of the existing [bnkorpus.info](https://bnkorpus.info/) database of Belarusian grammar into a more lightweight searchable format that is compatible with [Universal Dependencies](https://universaldependencies.org/) markup. When possible, the markup adheres to [Belarusian-HSE treebank](https://universaldependencies.org/treebanks/be_hse/index.html) format, but additional features were introduced based on parameters available in the source data and UD conventions. The data was collected from the source material without modifications except tag format conversion and the exclusion of undocumented tags.
 
 Data:
 - BNCorpus repository with documentation: [GrammarDB on GitHub](https://github.com/Belarus/GrammarDB)
