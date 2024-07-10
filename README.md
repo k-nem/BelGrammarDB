@@ -14,7 +14,7 @@ Universal Dependencies Markup:
 - [Belarusian-HSE treebank](https://universaldependencies.org/treebanks/be_hse/index.html)
 
 ## Database structure
-![BDschema](BDschema.png "BDschema")
+![BDschema](./BDschema.png "BDschema")
 
 The database has three tables that correspond to the structure of original XML: 
 - `Lemma` - The list of paradigms (words) identified by their lemma (initial, dictionary form) 
