@@ -24,21 +24,21 @@ The database has three tables that correspond to the structure of original XML:
 ### `Lemma` table
 
 Columns:
-- `ID INTEGER PRIMARY KEY` - Mandatory
-- `RefID INTEGER` - The original ID in BNCorpus XML, mandatory
-- `Lemma TEXT` - Mandatory
-- `POS TEXT` - Part of speech, mandatory:
-    - `ADJ` - adjective {Прыметнік}
-    - `CCONJ` - conjunction {злучнік}
-    - `PART` - particle {часціца}
-    - `ADP` - preposition (adposition) {прыназоўнік}
-    - `NUM` - numeral {лічэбнік}
-    - `NOUN` - noun {агульны назоўнік}
-    - `PROPN` - proper noun {уласны назоўнік}
-    - `VERB` - verb {дзеяслоў}
-    - `ADV` - adverb {прыслоўе} 
-    - `PRON` - pronoun {займеннік}
-   - `INTJ` - interjection {выклічнік}
+- `ID INTEGER PRIMARY KEY` 
+- `RefID INTEGER` - The original ID in BNCorpus XML
+- `Lemma TEXT` 
+- `POS TEXT` - Part of speech
+    - `ADJ` - Adjective {Прыметнік}
+    - `CCONJ` - Conjunction {злучнік}
+    - `PART` - Particle {часціца}
+    - `ADP` - Preposition (adposition) {прыназоўнік}
+    - `NUM` - Numeral {лічэбнік}
+    - `NOUN` - Noun {агульны назоўнік}
+    - `PROPN` - Proper noun {уласны назоўнік}
+    - `VERB` - Verb {дзеяслоў}
+    - `ADV` - Adverb {прыслоўе} 
+    - `PRON` - Pronoun {займеннік}
+   - `INTJ` - Interjection {выклічнік}
 - `Type TEXT` - {Тып} - Subtypes within a part of speech 
     - ADJ:
         - `Qlt` - qualitative {якасны}
@@ -67,7 +67,7 @@ Columns:
         - `Ntype` - noun-like {як у назоўніка} 
         - `Atype` - adjective-like {як у прыметніка}
         - `Ind` - indeclinable {нескланяльны}
-    - NOUN {Скланенне}:
+    - NOUN declension {скланенне}:
         - `1d` - 1 substantive declension {1 скланенне}
         - `2d` - 2 substantive declension {2 скланенне}
         - `3d` - 3 substantive declension {3 скланенне}
@@ -79,21 +79,20 @@ Columns:
         - `Ntype` - noun-like {як у назоўніка} 
         - `Atype` - adjective-like {як у прыметніка}
         - `Ind` - indeclinable {нескланяльны}
-    - VERB {Спражэнне}:
+    - VERB conjugation {спражэнне}:
         - `1c` - 1 conjugation type {1 спражэнне}
         - `2c` - 2 conjugation type {2 спражэнне}
         - `Com` - combined type {рознаспрагальны} 
-- `Degree TEXT` - {Ступень параўнання} - Degree of comparison:
-    - ADJ:
+- `Degree TEXT` - {Ступень параўнання} - ADJ degree of comparison
         - `Pos` - positive {станоўчая}
         - `Cmp` - comparative {вышэйшая}
         - `Sup` - superlative {найвышэйшая}
-- `Person INTEGER` - {Асоба} - Person for PRON
+- `Person INTEGER` - {Асоба} - PRON person
     - `0` - impersonal
     - `1` - 1st person
     - `2` - 2nd person
     - `3` - 3rd person
-- `Gender TEXT` - {Род} - Gender for NOUN
+- `Gender TEXT` - {Род} - NOUN gender
     - `Fem`- feminine {жаночы}
     - `Masc` - masculine {мужчынскі}
     - `Neut` - neutral {ніякі}
@@ -107,10 +106,10 @@ Columns:
 - `Aspect TEXT` {Трыванне} VERB aspect
     - `Imp` - imperfect {незакончанае}
     - `Perf` - perfect {закончанае}
-- `Animacy INTEGER` - {Адушаўлёнасць} - Animacy for NOUN
+- `Animacy INTEGER` - {Адушаўлёнасць} - NOUN animacy
     - `1` - True
     - `0` - False
-- `Abbr INTEGER` - {Скарачэнне} - Abbreviation for NOUN
+- `Abbr INTEGER` - {Скарачэнне} - Abbreviated NOUN
     - `1` - True 
     - `0` - False
 - `NumForm TEXT` {Форма} - NUM type by complexity, not in HSE treebank
@@ -118,20 +117,20 @@ Columns:
     - `Com` - complex {складаны}
 - `VerbForm TEXT` {Форма} - VERB form
     - `Part` - {дзеепрыметнік} - participle
-- `Personal TEXT` - {Асабовасць} - Personal/impersonal NOUN, not in HSE features
+- `Personal TEXT` - {Асабовасць} - Personal/impersonal NOUN, not in HSE treebank
     - `Per` - personal {асабовы}
     - `Imp`- impersonal {неасабовы}
-- `Origin TEXT` - {Спосаб утварэння} - ADV derivation pattern  - not in UD 
+- `Origin TEXT` - {Спосаб утварэння} - ADV derivation pattern, not in UD features
     - `Adj` - from adjective {ад прыметнікаў}
     - `Conv`- from converb {ад дзеепрыслоўяў}
     - `Num` - from numeral {ад лічэбнікаў}
     - `Noun` - from noun {ад назоўнікаў}
     - `Pron` - from pronoun {ад займеннікаў}
     - `Verb` - from verb {ад дзеясловаў}
-- `Poss INTEGER` - {прыналежны} - possessive PRON
+- `Poss INTEGER` - {прыналежны} - Possessive PRON
     - `1` - True
     - `0` - False
-- `Reflex INTEGER` - {зваротны} - reflexive PRON, VERB
+- `Reflex INTEGER` - {зваротны} - Reflexivity for PRON, VERB
     - `1` - True
     - `0` - False
 - `SubCat TEXT` - {Пераходнасць} - VERB transitivity 
@@ -172,20 +171,19 @@ Columns:
 - `Form TEXT` - Form without word stress
 - `Sources TEXT` - Same as in `Variant`
 - `Ortho TEXT` - Same as in `Variant`
-- `Accent TEXT` - Word stress position in string format. E.g. `Accent == 6` for `Form == кацяня` means that the 6th character of the form is stressed as in _кацян**я́**_
+- `Accent TEXT` - Word stress position in string format. E.g. `Accent == 6` for `Form == кацяня` means that the 6th character of the form is stressed as in `кацяня́`
     - For simple words:
-        - Accent mark is detected: One numeric value is provided.
-        - Accent mark is not detected: `NULL`
+        - Accent mark is detected -> One numeric value is provided.
+        - Accent mark is not detected -> `NULL`
     - For compound hyphenated words:
-        - Accent marks of all parts are detected: Multiple numeric values are provided as a comma separated list corresponding to the number of parts. 
-        - The accent marks of some parts are not detected: Multiple numeric values are provided as a comma separated list corresponding to the number of parts, with `0` values for the parts with undetected stress.
-        - No accent marks were detected in any
-         parts: `NULL`
+        - Accent marks of all parts are detected -> Multiple numeric values are provided as a comma separated list corresponding to the number of parts. 
+        - The accent marks of some parts are not detected -> Multiple numeric values are provided as a comma separated list corresponding to the number of parts, with `0` values for the parts with undetected stress.
+        - No accent marks were detected in any parts -> `NULL`
 - `Gender TEXT` - {Род} - Gender for ADJ, NUM, NOUN, PRON, VERB 
     - `Fem`- feminine {жаночы}
     - `Masc` - masculine {мужчынскі}
     - `Neut` - neutral {ніякі}
-- `Person INTEGER` - {Асоба} - Person for VERB
+- `Person INTEGER` - {Асоба} - VERB person
     - `0` - impersonal
     - `1` - 1st person
     - `2` - 2nd person
@@ -200,20 +198,20 @@ Columns:
 - `Number TEXT` - {Лік} - Number for ADJ, NUM, NOUN, PRON, VERB 
     - `Sing` - singular {адзіночны}
     - `Plur` - plural {множны}
-- `Degree TEXT` - {Ступень параўнання} - Degree for ADV
+- `Degree TEXT` - {Ступень параўнання} - ADV degree of comparison 
     - `Pos` - positive {станоўчая}, `tag = "P"`
     - `Cmp` - comparative {вышэйшая}, `tag = "C"`
     - `Sup` - superlative {найвышэйшая}, `tag = "S"`
-- `Tense TEXT` - {Час} - Tense for VERB
+- `Tense TEXT` - {Час} - VERB tense
     - `Past` - past {прошлы}
     - `Pres` - present {цяперашні}
     - `Fut` - future {будучы}
-- `Mood TEXT` - {Лад} - Mood for VERB
+- `Mood TEXT` - {Лад} - VERB mood
     - `Imp` - imperative {загадны}
 - `VerbForm TEXT` - {Форма} - VERB form
     - `Inf` - infinitive {Інфінітыў}
     - `Conv` - converb/transgressive {дзеепрыслоўе}
-- `Animacy INTEGER` - {Адушаўлёнасць} - Animacy option for Accusative case for ADJ, NOUN, NUM, PRON, participle (VERB, VerbForm == Part)
+- `Animacy INTEGER` - {Адушаўлёнасць} - Animacy form options for Accusative case for ADJ, NOUN, NUM, PRON, participle (VERB, VerbForm == Part). **This parameter is provided inconsistently**
     - `1` - True
     - `0` - False
 - `Short INTEGER` - {Кароткая форма} - Short form of participle (VERB, VerbForm == Part)
