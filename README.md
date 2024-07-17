@@ -21,9 +21,9 @@ Encoding: UTF-8
 
 | Level | Number |
 | ----- | ----- |
-| Lemma | 238,345 |
-| Variant | 239,638 |
-| Form | 3,968,107 |
+| Lemma | 238,395 |
+| Variant | 239,690 |
+| Form | 3,968,166 |
 
 ## Database structure
 ![BDschema](https://github.com/k-nem/BelGrammarDB/blob/main/DBschema.png "BDschema")
@@ -50,7 +50,9 @@ Columns:
     - `VERB` - Verb {дзеяслоў}
     - `ADV` - Adverb {прыслоўе} 
     - `PRON` - Pronoun {займеннік}
-   - `INTJ` - Interjection {выклічнік}
+    - `INTJ` - Interjection {выклічнік}
+    - `PRED` - Predicative {прэдыкатыў}, not in UD POS tags
+    - `PARENTH` - Parenthetical {пабочнае слова}, not in UD POS tags
 - `Type TEXT` - {Тып} - Subtypes within a part of speech 
     - ADJ:
         - `Qlt` - qualitative {якасны}
@@ -119,11 +121,10 @@ Columns:
     - `Imp` - imperfect {незакончанае}
     - `Perf` - perfect {закончанае}
 - `Animacy INTEGER` - {Адушаўлёнасць} - NOUN animacy
-    - `1` - True
-    - `0` - False
+    - `1` - True (`Anim` in UD)
+    - `0` - False (`Inan` in UD)
 - `Abbr INTEGER` - {Скарачэнне} - Abbreviated NOUN
-    - `1` - True 
-    - `0` - False
+    - `1` - True (`Yes` in UD)
 - `NumForm TEXT` {Форма} - NUM type by complexity, not in HSE treebank
     - `Sim` - simple {просты}
     - `Com` - complex {складаны}
@@ -140,11 +141,9 @@ Columns:
     - `Pron` - from pronoun {ад займеннікаў}
     - `Verb` - from verb {ад дзеясловаў}
 - `Poss INTEGER` - {прыналежны} - Possessive PRON
-    - `1` - True
-    - `0` - False
+    - `1` - True (`Yes` in UD)
 - `Reflex INTEGER` - {зваротны} - Reflexivity for PRON, VERB
-    - `1` - True
-    - `0` - False
+    - `1` - True (`Yes` in UD)
 - `SubCat TEXT` - {Пераходнасць} - VERB transitivity 
     - `Intr` - intransitive {непераходны}
     - `Tran` - transitive {пераходны} 
@@ -227,8 +226,7 @@ Columns:
     - `1` - True
     - `0` - False
 - `Short INTEGER` - {Кароткая форма} - Short form of participle (VERB, VerbForm == Part)
-    - `1` - True 
-    - `0` - False
+    - `1` - True (`Yes` in UD)
 
 ## License
 Data reused from [GrammarDB](https://github.com/Belarus/GrammarDB) under [Creative Commons Attribution/Share-Alike 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
