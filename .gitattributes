@@ -1,1 +1,2 @@
 *.db filter=lfs diff=lfs merge=lfs -text
+BelGram.db filter=lfs diff=lfs merge=lfs -text
