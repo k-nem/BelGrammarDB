@@ -98,9 +98,9 @@ Columns:
         - `2c` - 2 conjugation type {2 спражэнне}
         - `Com` - combined type {рознаспрагальны} 
 - `Degree TEXT` - {Ступень параўнання} - ADJ degree of comparison
-        - `Pos` - positive {станоўчая}
-        - `Cmp` - comparative {вышэйшая}
-        - `Sup` - superlative {найвышэйшая}
+    - `Pos` - positive {станоўчая}
+    - `Cmp` - comparative {вышэйшая}
+    - `Sup` - superlative {найвышэйшая}
 - `Person INTEGER` - {Асоба} - PRON person
     - `0` - impersonal
     - `1` - 1st person
@@ -131,8 +131,8 @@ Columns:
 - `VerbForm TEXT` {Форма} - VERB form
     - `Part` - {дзеепрыметнік} - participle
 - `Personal TEXT` - {Асабовасць} - Personal/impersonal NOUN, not in HSE treebank
-    - `Per` - personal {асабовы}
-    - `Imp`- impersonal {неасабовы}
+    - `1` - personal {асабовы}
+    - `0`- impersonal {неасабовы}
 - `Origin TEXT` - {Спосаб утварэння} - ADV derivation pattern, not in UD features
     - `Adj` - from adjective {ад прыметнікаў}
     - `Conv`- from converb {ад дзеепрыслоўяў}
