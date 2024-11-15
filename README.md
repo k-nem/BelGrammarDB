@@ -130,7 +130,7 @@ Columns:
     - `Com` - complex {складаны}
 - `VerbForm TEXT` {Форма} - VERB form
     - `Part` - {дзеепрыметнік} - participle
-- `Personal TEXT` - {Асабовасць} - Personal/impersonal NOUN, not in HSE treebank
+- `Personal INTEGER` - {Асабовасць} - Personal/impersonal NOUN, not in HSE treebank
     - `1` - personal {асабовы}
     - `0`- impersonal {неасабовы}
 - `Origin TEXT` - {Спосаб утварэння} - ADV derivation pattern, not in UD features
